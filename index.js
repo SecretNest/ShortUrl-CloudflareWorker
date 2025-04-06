@@ -620,7 +620,7 @@ async function GlobalManagementProcess(request, url, host, queryParams, globalMa
             <a href="#" data-toggle="collapse" data-target="#domains-body" aria-expanded="true" aria-controls="domains-head">Domains</a>
           </div>
           <div id="domains-body" class="collapse show" aria-labelledby="domains-head">
-            <table v-else class="table table-stripped">
+            <table class="table table-stripped">
               <thead>
                 <tr>
                   <th>Domain</th>
