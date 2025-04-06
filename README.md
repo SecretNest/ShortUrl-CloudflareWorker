@@ -37,17 +37,15 @@ When a request is received by ShortUrl, it will follow these steps.
    3. Redirects to ``Default Redirect Target`` specified in Domain Management of this domain if it is not empty.
 6. Redirects to ``Default Redirect Target`` specified in Global Management.
 
-*1: Host name matching rules:
-- Host name matching is case insensitive.
-- Port number 443 should not present, but all others should and will be treated separately. For example:
-  - The record ``example.com`` will be matched with the host ``example.com`` and ``example.com:443``.
-  - The record ``example.com:8080`` will be matched with the host ``example.com:8080`` only.
-- The record with the key ends with ``:443`` in domains or aliases will not be matched unless it's pointed by other matched alias records.
-
-*2: Name matching could be case sensitive or insensitive, based on the setting ``Ignore Case When Matching`` specified in the Domain Management of the related domain.
-When redirecting:
+- Host name matching rules:
+  - Host name matching is case insensitive.
+  - Port number 443 should not present, but all others should and will be treated separately. For example:
+    - The record ``example.com`` will be matched with the host ``example.com`` and ``example.com:443``.
+    - The record ``example.com:8080`` will be matched with the host ``example.com:8080`` only.
+  - The record with the key ends with ``:443`` in domains or aliases will not be matched unless it's pointed by other matched alias records.
+- Name matching could be case sensitive or insensitive, based on the setting ``Ignore Case When Matching`` specified in the Domain Management of the related domain. When redirecting:
 - HTTP 308 will be used, when ``Use HTTP 308 instead of 307`` or ``Use HTTP 308`` is selected. Or HTTP 307 will be used.
-- When ``Attach Query Process`` is enabled and the query string exists from the request:
-  - When character ``?`` presents in the target of the redirection, ``&`` and the query string from the request will be appended.
-  - When character ``?`` absents from the target of the redirection, ``?`` and the query string from the request will be appended.
-- When ``Attach Query Process`` is disabled, the query string, if exists, from the request will be dropped and will not be passed into the redirection target.
+  - When ``Attach Query Process`` is enabled and the query string exists from the request:
+    - When character ``?`` presents in the target of the redirection, ``&`` and the query string from the request will be appended.
+    - When character ``?`` absents from the target of the redirection, ``?`` and the query string from the request will be appended.
+  - When ``Attach Query Process`` is disabled, the query string, if exists, from the request will be dropped and will not be passed into the redirection target.
