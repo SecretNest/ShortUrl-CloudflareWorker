@@ -46,6 +46,8 @@ Adds or removes domain, or navigates to Domain Management page of the selected d
 To add a new domain, enter the domain name and press Add Domain button.
 For domain removal and management, press the Remove or Manage button after the domain related.
 
+After a domain added, you need also map the domain to this worker under ``Domains & Routes`` block of ``Settings`` tab of this worker dashboard page.
+
 ## Aliases
 Adds, updates or removes domain aliases.
 
@@ -54,6 +56,8 @@ To update an alias with a new key and / or target, change the values and press U
 To remove an alias, press Remove button after the alias related.
 
 The target can be the Domain under Domains block, or another Alias under Aliases block for recursive resolving with 16 as the max depth.
+
+After an alias added, you need also map the domain to this worker under ``Domains & Routes`` block of ``Settings`` tab of this worker dashboard page.
 
 ## Domain name and alias key
 - Domain name and alias key matching is case insensitive.
