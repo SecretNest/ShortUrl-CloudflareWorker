@@ -17,6 +17,8 @@ Management keys are the only validation for management, which should be kept in 
   - can be obtained from the configuration file.
   - is used as part of the url of the Manage button in Domains block of Global Management page.
   - is displayed and can be changed in the Domain Management page of the related domain.
+ 
+For safety reasons, you should modify Management Keys as soon as possible.
 
 # Global Management page
 
