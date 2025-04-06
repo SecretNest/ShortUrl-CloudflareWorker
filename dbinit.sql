@@ -1,0 +1,4 @@
+CREATE TABLE GlobalSetting(GlobalManagementKey TEXT, PreferXForwardedHost INTEGER, DefaultTarget TEXT, IsDefaultTargetPermanent INTEGER, DefaultTargetQueryProcess INTEGER, GlobalManagementEnabledHosts TEXT);
+CREATE TABLE DomainAlias(DomainLower TEXT PRIMARY KEY, Domain TEXT, TargetDomainLower TEXT, TargetDomain TEXT);
+CREATE TABLE DomainSetting(DomainLower TEXT PRIMARY KEY, Domain TEXT, ManagementKey TEXT, IgnoreCaseWhenMatching INTEGER, DefaultTarget TEXT, IsDefaultTargetPermanent INTEGER, DefaultTargetQueryProcess INTEGER);
+CREATE TABLE DomainRedirect(DomainLower TEXT, SourceForMatching TEXT, Source TEXT, Target TEXT, IsPermanent INTEGER, QueryProcess INTEGER, PRIMARY KEY (DomainLower, SourceForMatching));
