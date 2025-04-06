@@ -1,6 +1,6 @@
 # Management
 
-All settings could be changed in database. Using management pages is recommended. If the management key is forgotten, retrieves it from table GlobalSetting of database.
+All settings could be changed in database. Using management pages is recommended. If the management key is forgotten, retrieve it from table GlobalSetting of database.
 
 # Management Key
 
