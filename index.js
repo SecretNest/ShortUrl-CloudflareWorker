@@ -1255,7 +1255,7 @@ async function DomainManagementProcess(request, url, queryParams, currentDomain,
                             Ignore Case When Matching
                           </label>
                         </div>
-                        <div class="text-muted form-text">After enable this, the records with similar names with different case will be kept only one.</div>
+                        <div class="text-muted form-text">When enabled, address matching will no longer consider upper and lower case differences.</div>
                       </div>
                       <hr />
                       <button type="button" class="btn btn-outline-secondary" v-on:click="updateIgnoreCase()">Update</button>
