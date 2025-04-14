@@ -26,7 +26,7 @@ When a request is received by ShortUrl, it will follow these steps.
 3. Enters the Global Management page when
    - The ``access key`` equals to ``Global Management Key``. And,
    - The ``host`` is allowed to enter Global Management page when
-     - The ``host`` exists(*1) in ``Global Management Enabled Hosts``. Or,
+     - The ``host`` exists in ``Global Management Enabled Hosts``. Or,
      - The list ``Global Management Enabled Hosts`` is empty.
 4. Resolves by aliases when the ``host`` equals(*1) the ``Alias`` column of one record in ``Aliases`` from Global Management, choosing ``Target`` as the new value of ``host`` and restart this step. Aliases could be resolved recursively with 16 as the max depth.
 5. Processes the request against the domain when the ``host`` equals(*1) ``Domain`` column of one record in ``Domains`` from Global Management.
