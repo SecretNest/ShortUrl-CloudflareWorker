@@ -1626,13 +1626,14 @@ function Redirect(target, isPermanent, queryProcess, url) {
 __name(Redirect, "Redirect");
 var index_default = {
   async fetch(request, env, ctx) {
+    const globalSettingPromise = ReadGlobalSetting(env);
     const maxRedirectLimit = 16;
-    const globalSetting = await ReadGlobalSetting(env);
     var currentDomain;
     const url = new URL(request.url);
     let host = url.host;
     let hostLower = host.toLowerCase();
     const address = url.pathname.substring(1);
+    const globalSetting = await globalSettingPromise;
     if (address === globalSetting.GlobalManagementKey) {
       var globalManagementEnabledHosts;
       var noManagementEnabledHosts;
