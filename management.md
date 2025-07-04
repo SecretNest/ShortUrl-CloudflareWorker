@@ -9,12 +9,12 @@ Management keys are the only validation for management, which should be kept in 
 * Global Management key
   - only has one.
   - is the key for entering the Global Management page.
-  - can be obtained from the configuration file.
+  - can be obtained from the table GlobalSetting of database.
   - is displayed and can be changed in Global Management page.
 * Domain Management key
   - can be set separately for each domain name.
   - is the key for entering the Domain Management page of the related domain.
-  - can be obtained from the configuration file.
+  - can be obtained from the table DomainSetting of database.
   - is used as part of the url of the Manage button in Domains block of Global Management page.
   - is displayed and can be changed in the Domain Management page of the related domain.
  
