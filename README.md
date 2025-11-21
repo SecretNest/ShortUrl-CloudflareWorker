@@ -37,7 +37,7 @@ When a request is received by ShortUrl, it will follow these steps.
    3. Redirects to ``Default Redirect Target`` specified in Domain Management of this domain if it is not empty.
 6. Redirects to ``Default Redirect Target`` specified in Global Management.
 
-## Host name matching
+## (*1) Host name matching
 
 - Host name matching is case insensitive.
 - Port number 443 should not present, but all others should and will be treated separately. For example:
