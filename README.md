@@ -45,7 +45,7 @@ When a request is received by ShortUrl, it will follow these steps.
   - The record ``example.com:8080`` will be matched with the host ``example.com:8080`` only.
 - The record with the key ends with ``:443`` in domains or aliases will not be matched unless it's pointed by other matched alias records.
 
-## Redirect name matching
+## (*2) Redirect name matching
 
 Name matching could be case sensitive or insensitive, based on the setting ``Ignore Case When Matching`` specified in the Domain Management of the related domain.
 
