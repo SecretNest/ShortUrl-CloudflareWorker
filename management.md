@@ -109,4 +109,4 @@ When redirecting:
 
 # See also
 
-Checks [Work flow](Readme.md#work-flow) for detailed processing of each request.
+Checks [Work flow](readme.md#work-flow) for detailed processing of each request.
