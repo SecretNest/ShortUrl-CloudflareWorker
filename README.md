@@ -52,7 +52,10 @@ Name matching could be case sensitive or insensitive, based on the setting ``Ign
 When redirecting:
 
 - HTTP 308 will be used, when ``Use HTTP 308 instead of 307`` or ``Use HTTP 308`` is selected. Or HTTP 307 will be used.
-- When ``Attach Query Process`` is enabled and the query string exists from the request:
-  - When character ``?`` presents in the target of the redirection, ``&`` and the query string from the request will be appended.
-  - When character ``?`` absents from the target of the redirection, ``?`` and the query string from the request will be appended.
-- When ``Attach Query Process`` is disabled, the query string, if exists, from the request will be dropped and will not be passed into the redirection target.
+- When ``Attach Query Process`` is enabled,
+  - If the query string exists in the request:
+    - When character ``?`` presents in the target of the redirection record, the query string from the request will be appended to the target， using ``&`` as the connector.
+    - When character ``?`` absents from the target of the redirection, the query string from the request will be appended to the target， using ``?`` as the connector.
+  - If the query string absents from the request: The target of the redirection record will be used without modification.
+  - Note: This function valids for redirection only. The value will be ignored for the record with target starting with ``>``, ``<`` and ``"``.
+- When ``Attach Query Process`` is disabled, the query string, if exists, from the request will be dropped. The target of the redirection record will be used without modification.
